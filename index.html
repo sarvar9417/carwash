@@ -102,24 +102,31 @@ http://www.templatemo.com/tm-475-holiday
 					<div class="tab-content" id="">
 						<div role="tabpanel" class="tab-pane fade in active tm-white-bg" id="hotel">
 							<div class="tm-search-box effect2">
-								<form action="#" method="post" class="hotel-search-form">
+								<div action="#" method="post" class="hotel-search-form">
 									<div class="tm-form-inner">
 										<div class="form-group">
-											<input class="form-control" name="name" placeholder="Ismingizni kiriting" />
+											<input id="name" class="form-control" name="name"
+												placeholder="Ismingizni kiriting" />
 										</div>
 										<div class="form-group">
-											<input type='tel' class="form-control"
+											<input id="phone" type='tel' class="form-control"
 												placeholder="Telefon raqamingizni kiriting" />
 										</div>
 										<div class="form-group">
-											<textarea rows="4" type='tel' class="form-control"
+											<textarea id="message" rows="4" type='tel' class="form-control"
 												placeholder="Telefon raqamingizni kiriting"></textarea>
 										</div>
 									</div>
 									<div class="form-group tm-yellow-gradient-bg text-center">
-										<button name="submit" class="tm-yellow-btn">Yuborish</button>
+										<button onclick="sendMessage()" name="submit"
+											class="tm-yellow-btn">Yuborish</button>
 									</div>
-								</form>
+									<div style="text-align: center; background-color: rgb(86, 223, 27); font-size: 16pt; padding: 20px; color: white; display: none;"
+										class="send" id="send">Xabar yuborildi</div>
+									<div style="text-align: center; background-color: rgb(238, 75, 50); font-size: 16pt; padding: 20px; color: white; display: none;"
+										class="error" id="error">
+										Xabar yuborilmadi</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -319,7 +326,8 @@ http://www.templatemo.com/tm-475-holiday
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
 					<div class="tm-home-box-2 tm-home-box-2-right">
-						<img src="https://static.educalingo.com/img/en/800/car-wash.jpg" alt="image" class="img-responsive">
+						<img src="https://static.educalingo.com/img/en/800/car-wash.jpg" alt="image"
+							class="img-responsive">
 					</div>
 				</div>
 			</div>
@@ -436,6 +444,13 @@ http://www.templatemo.com/tm-475-holiday
 
 
 		});
+	</script>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function () {
+			emailjs.init("user_yozpFPT1k5CNmnkAQ7LmS");
+		})();
 	</script>
 </body>
 
